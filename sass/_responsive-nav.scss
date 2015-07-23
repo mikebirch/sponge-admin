@@ -1,0 +1,56 @@
+/*! responsive-nav.js 1.0.32 by @viljamis */
+
+.js .nav-collapse {
+  clip: rect(0 0 0 0);
+  max-height: 0;
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  zoom: 1;
+  clear: right; // .nav-toggle is floated right
+}
+
+.nav-collapse.opened {
+  max-height: 9999px;
+}
+
+.disable-pointer-events {
+  pointer-events: none !important;
+}
+
+.nav-toggle {
+  display: block;
+  line-height: 2.625em; // 42/16
+  padding-right: 2.625em;
+  background: url(../img/list2.png) no-repeat;
+  background-image: linear-gradient(transparent, transparent), url(../img/list2.svg);
+  background-position: right 1px;
+  float: right;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  text-decoration: none;
+}
+
+@include breakpoint($small) {
+  .js .nav-collapse {
+    position: relative;
+  }
+  .js .nav-collapse.closed {
+    max-height: none;
+  }
+  .nav-toggle {
+    display: none;
+  }
+}
+
+@include breakpoint($med) {
+  .js .nav-collapse {
+    position: absolute !important; // responsive-nav.js sets this to relative 
+    clip: auto;
+  }
+}

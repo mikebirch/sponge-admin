@@ -1,0 +1,42 @@
+/* message messages */ 
+.message {
+    clear: both;
+    margin: 0 0 $vertical-measure 0.5em;
+    padding: .5em 1em;
+    border-radius: 3px;
+}
+
+.message.success {
+    background-color: tint($green, 80%);
+    border: 1px solid tint($green, 60%);
+    box-shadow: -0.5em 0 0 $green;
+}
+
+.message .icon-checkmark-circle {
+    color: $green;
+}
+
+.message.error {
+    background-color: tint($red, 80%);
+    border: 1px solid tint($red, 60%);
+    box-shadow: -0.5em 0 0 $red;
+}
+
+.message .icon-cancel-circle {
+    color: $red;
+}
+
+
+/* Form errors */
+form .error {
+    background: tint($red, 80%);
+    border-radius: 4px;
+    border: 1px solid tint($red, 60%);
+    margin-left: -0.5em;
+    padding: .5em;
+}
+
+form .error-message {
+    color: $red;
+    margin-top:.5em;
+}

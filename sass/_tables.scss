@@ -1,0 +1,141 @@
+/* https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/_tables.scss */
+
+table {
+    background-color: $table-bg;
+    padding: 0;
+    margin: 0;
+    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: $vertical-measure;
+}
+
+tbody > tr:nth-child(odd) {
+    background-color: $table-bg-accent;
+}
+
+tbody > tr:hover {
+    background-color: $table-bg-hover;
+}
+
+caption {
+    padding-top: .5em;
+    padding-bottom: .5em;
+    text-align: left;
+}
+
+th {
+    text-align: left;
+    vertical-align: bottom;
+    border-bottom: 3px solid $table-border-color;
+}
+
+th, td {
+    padding: .5em 1em;
+    margin: 0;
+    line-height: $line-height;
+    vertical-align: center;
+}
+
+// Remove top border from thead by default
+caption + thead,
+colgroup + thead,
+thead:first-child {
+    > tr:first-child {
+        > th,
+        > td {
+            border-top: 0;
+        }
+    }
+}
+
+.numeric {
+    text-align: right;
+}
+
+/*
+Responsive tables, from Bootstrap: 
+https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/_tables.scss 
+ */
+
+// Responsive tables 
+//
+// Wrap your tables in `.table-responsive` and we'll make them mobile friendly
+// by enabling horizontal scrolling. Only applies <768px. Everything above that
+// will display normally.
+
+.table-responsive {
+    @include breakpoint($only-small) {
+        overflow-x: auto;
+        min-height: 0.01%; // Workaround for IE9 bug (see https://github.com/twbs/bootstrap/issues/14837)
+        width: 100%;
+        margin-bottom: ($line-height * 0.75);
+        overflow-y: hidden;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+        border: 1px solid $table-border-color;
+
+        // Tighten up spacing
+        > table {
+            margin-bottom: 0;
+
+            // Ensure the content doesn't wrap
+            > thead,
+            > tbody,
+            > tfoot {
+                > tr {
+                    > th,
+                    > td {
+                        white-space: nowrap;
+                    }
+                }
+            }
+        }
+    }
+}
+
+td.actions {
+    white-space: nowrap;
+    font-size: .8125em;
+    padding: 0;
+    width: 14em;
+}
+
+.js td.actions {
+    width: 1em; // keep this col to it's min width
+}
+
+.js td.actions form {
+    display: none; // link added by JS to submit form after confirmation
+}
+
+@include breakpoint($med) {
+
+    // show and hide action links and delete form
+
+    td.actions a, 
+    .no-js td.actions form { // no js means form would be display:block
+        visibility: hidden;
+    }
+
+    tr:hover td.actions a,
+    .no-js tr:hover td.actions form {
+        visibility: visible;
+    }
+
+}
+
+td.actions a { 
+    padding: 0.5em;
+}
+
+td.actions a:hover {
+    background-color: #fff;
+    text-decoration: none;
+    border-radius: 2px;
+} 
+
+.js #delete_choices,
+.js .delete_selected {
+    background-color: tint($red, 80%);
+    box-shadow: -0.5em 0 0 $red;
+}

@@ -1,0 +1,26 @@
+{
+  "name": "Sponge Admin",
+  "version": "0.0.1",
+  "private": true,
+  "authors": [
+    "Michael Birch <michael@regbirch.com>"
+  ],
+  "description": "Sponge Admin — a CakePHP 3.x theme",
+  "license": "MIT",
+  "homepage": "http://www.regbirch.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "demos"
+  ],
+  "dependencies": {
+    "jquery": "~1.11.3",
+    "susy": "~2.2.5",
+    "compass-mixins": "~0.12.7",
+    "normalize.css": "~3.0.3",
+    "responsive-nav": "~1.0.39"
+  }
+}

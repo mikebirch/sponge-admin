@@ -1,0 +1,231 @@
+.primary, .nav, .sub-nav, .menu {
+    @extend %nav-menu;
+}
+
+/* main nav menu */
+
+.primary {
+    background-color: #333;
+}
+
+.primary-item a {
+    padding: .5em 0 .5em 1em;
+}
+
+.primary-item a:hover,
+.primary-item a:focus {
+    background-color: #333;
+}
+
+.primary-item.active {
+    background-color: #4a4a4a;
+    padding: .5em 0 .5em 1em;
+}
+
+
+.header-home-link a,
+.parent {
+    padding: .5em 0;
+    display: inline-block;
+}
+
+.parent > span,
+.parent .icon-arrow-down {
+    display: none; 
+}
+
+.header-home-link span {
+    display: none;
+}
+
+.nav li {
+    text-align: left;
+}
+
+
+
+.sub-nav {
+    @include border-radius(3px);
+    
+}
+
+.js .sub-nav {
+    margin-top: 1.5em;
+}
+
+li.parent:hover {
+    cursor: pointer;
+}
+
+.sub-nav {
+    display: none; 
+}
+
+// fallback in case of no JavaScript
+.no-js .parent:hover .sub-nav {
+    display:block;
+}
+
+.sub-nav {
+    position: absolute;
+    background-color: #4A4A4A;
+    margin-right: 1em;
+    padding: 0.5em;
+}
+
+@include breakpoint($small) {
+
+    nav {
+        background-color: #555;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        clear: both;
+        overflow: hidden;
+        float: left;
+    }
+
+    .primary-item {
+        float: left;
+    }
+
+    .primary-item a,
+    .primary-item.active {
+        padding: .5em 1em;
+    }
+
+    .primary-item span {
+        display: none;
+    }
+
+    .primary .icon {
+        margin-right: 0;
+    }
+
+    .primary-item a:hover,
+    .primary-item a:focus,
+    .primary-item.active {
+        background-color: #f4f4f4;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+
+    .primary-item a:hover,
+    .primary-item a:focus,
+    .primary-item.active,
+    .primary-item.active .icon,
+    .primary-item a:hover .icon,
+    .primary-item a:focus .icon {
+        color: #333;
+    }
+
+    .nav {
+        float: right;
+        margin-right: 3em;
+    }
+
+    .header-home-link a ,
+    .parent {
+        padding: 0.5em 0;
+    }
+
+    .parent > span {
+        display: inline;
+    }
+
+    .header-home-link span,
+    .parent .icon-arrow-down {
+        display: inline;
+    }
+
+    .parent > .icon-user {
+        display: none;
+    }
+
+    .menu {
+        margin-bottom: 1em;
+        overflow: hidden;
+    }
+
+    .menu li {
+        float: left;
+        margin-right: 1em;
+    }
+
+    h1, h2 {
+        clear: left;
+    }
+
+}
+
+@include breakpoint($med) {
+
+    nav {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        float: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-top: 6.5em;
+        width: 9.714285714em; // match .main-wrapper margin-left = (16/14)*8.5
+    }
+
+    .primary {
+        position: fixed;
+        width: 9.714285714em;
+    }
+
+    .primary-item {
+        float: none;
+    }
+
+    .primary-item span {
+        display: inline;
+    }
+
+    .primary .icon {
+        margin-right: 0.5em;
+    }
+
+    .primary-item a:hover,
+    .primary-item a:focus,
+    .primary-item.active {
+        background-color: #555;
+    }
+
+    .primary-item a:hover,
+    .primary-item a:focus,
+    .primary-item.active {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+
+    .primary-item a:hover,
+    .primary-item a:focus,
+    .primary-item.active,
+    .primary-item.active .icon,
+    .primary-item a:hover .icon,
+    .primary-item a:focus .icon {
+        color: #ddd;
+    }
+
+    .primary-item.active {
+        position: relative;
+    }
+
+    .primary-item.active span:after {
+        border-color: transparent #f3f3f3 transparent transparent;
+        border-image: none;
+        border-style: solid;
+        border-width: 8px;
+        content: " ";
+        height: 0;
+        margin-top: -8px;
+        pointer-events: none;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        width: 0;
+    }
+
+}

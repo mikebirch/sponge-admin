@@ -1,0 +1,39 @@
+@mixin button($color) { 
+    text-decoration: none;
+    background-color: $color;
+    border: none;
+    border-bottom: .2em solid shade($color, 10%);
+    color: tint($color, 90%);
+    border-radius: 2px;
+    letter-spacing: .5px;
+
+    &:hover {
+        color: #fff;
+        background-color: tint($color, 15%);
+        border-bottom-color: tint($color, 5%);
+    }    
+    &:focus {
+        color: tint($color, 90%);
+        background-color: shade($color, 10%);
+        border-bottom-color: shade($color, 10%);
+    }
+}
+
+input[type="submit"], 
+.btn { 
+    @include button($blue);
+    padding: .5em 1.5em;
+}
+
+.btn-cancel { 
+    @include button(#bbb);
+    padding: .5em 1.5em;
+}
+
+a.btn-cancel:hover {
+    color: $text-color;
+}
+
+a.button {
+    text-decoration: none;
+}

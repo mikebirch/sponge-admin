@@ -1,0 +1,101 @@
+/* layout */
+/* line 3, /Users/mike/vagrant/php55_ubuntu/spongecakecms.com/plugins/SpongeAdmin/sass/ie.scss */
+header {
+  font-size: .875em;
+  padding: 0; }
+
+/* line 8, /Users/mike/vagrant/php55_ubuntu/spongecakecms.com/plugins/SpongeAdmin/sass/ie.scss */
+.header-title {
+  display: block; }
+
+/* line 12, /Users/mike/vagrant/php55_ubuntu/spongecakecms.com/plugins/SpongeAdmin/sass/ie.scss */
+header, main {
+  margin: 0; }
+
+/* line 16, /Users/mike/vagrant/php55_ubuntu/spongecakecms.com/plugins/SpongeAdmin/sass/ie.scss */
+header {
+  overflow: visible;
+  padding: 0; }
+
+/* line 22, /Users/mike/vagrant/php55_ubuntu/spongecakecms.com/plugins/SpongeAdmin/sass/ie.scss */
+.header-wrapper,
+.footer-wrapper {
+  padding: 0 1em; }
+
+/* line 26, /Users/mike/vagrant/php55_ubuntu/spongecakecms.com/plugins/SpongeAdmin/sass/ie.scss */
+.main-wrapper {
+  padding: 1em; }
+
+/* definition lists */
+/* line 32, /Users/mike/vagrant/php55_ubuntu/spongecakecms.com/plugins/SpongeAdmin/sass/ie.scss */
+dl {
+  width: 100%;
+  overflow: hidden; }
+
+/* line 36, /Users/mike/vagrant/php55_ubuntu/spongecakecms.com/plugins/SpongeAdmin/sass/ie.scss */
+dt {
+  float: left;
+  width: 20%;
+  clear: left; }
+
+/* line 41, /Users/mike/vagrant/php55_ubuntu/spongecakecms.com/plugins/SpongeAdmin/sass/ie.scss */
+dd {
+  float: left;
+  width: 80%;
+  margin: 0; }
+
+/* line 47, /Users/mike/vagrant/php55_ubuntu/spongecakecms.com/plugins/SpongeAdmin/sass/ie.scss */
+dt, dd {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0.5em 0 1em 0; }
+
+/* line 52, /Users/mike/vagrant/php55_ubuntu/spongecakecms.com/plugins/SpongeAdmin/sass/ie.scss */
+dl {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+
+/* forms */
+/* line 61, /Users/mike/vagrant/php55_ubuntu/spongecakecms.com/plugins/SpongeAdmin/sass/ie.scss */
+.text input,
+.textarea textarea {
+  width: auto; }
+
+/* nav */
+/* line 68, /Users/mike/vagrant/php55_ubuntu/spongecakecms.com/plugins/SpongeAdmin/sass/ie.scss */
+.parent > span,
+.parent .icon-arrow-down {
+  display: none; }
+
+/* line 72, /Users/mike/vagrant/php55_ubuntu/spongecakecms.com/plugins/SpongeAdmin/sass/ie.scss */
+.header-home-link span {
+  display: none; }
+
+/* line 76, /Users/mike/vagrant/php55_ubuntu/spongecakecms.com/plugins/SpongeAdmin/sass/ie.scss */
+.parent > span {
+  display: block; }
+
+/* line 80, /Users/mike/vagrant/php55_ubuntu/spongecakecms.com/plugins/SpongeAdmin/sass/ie.scss */
+.header-home-link span {
+  display: block; }
+
+/* tables */
+/* line 86, /Users/mike/vagrant/php55_ubuntu/spongecakecms.com/plugins/SpongeAdmin/sass/ie.scss */
+td.actions a,
+.no-js td.actions form {
+  visibility: hidden; }
+
+/* line 91, /Users/mike/vagrant/php55_ubuntu/spongecakecms.com/plugins/SpongeAdmin/sass/ie.scss */
+tr:hover td.actions a,
+.no-js tr:hover td.actions form {
+  visibility: visible; }
+
+/* icons */
+/* line 97, /Users/mike/vagrant/php55_ubuntu/spongecakecms.com/plugins/SpongeAdmin/sass/ie.scss */
+.pages--published span,
+.pages--public span {
+  clip: none;
+  height: auto;
+  margin: auto;
+  overflow: visible;
+  padding: 0;
+  position: static;
+  width: auto; }

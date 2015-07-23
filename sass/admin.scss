@@ -1,0 +1,74 @@
+@import "base";
+@import "typecsset";
+@import "typography";
+@import "buttons";
+@import "layout";
+@import "icons";
+@import "nav";
+@import "forms";
+@import "messages";
+@import "modal";
+@import "responsive-nav";
+@import "pagination";
+@import "tables";
+
+body {
+    background-color: #555;
+}
+
+a {
+    color: $link-text-color;
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    color: $link-text-hover-color
+}
+
+.main-wrapper {
+    background-color: #f3f3f3;
+}
+
+.header-wrapper,
+.footer-wrapper,
+.header-wrapper a,
+.footer-wrapper a {
+    color: #ddd;
+}
+
+.header-wrapper,
+.footer-wrapper {
+    background-color: #444;
+}
+
+footer img {
+    max-width: 200px;
+}
+
+footer {
+    font-size: .875em;
+}
+
+ul#photos {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul#photos li {
+    display: inline-block;
+    margin: 0 0 1em 0;
+    padding: 0;
+    width: 150px;
+    vertical-align: top;
+}
+
+
+@include breakpoint($med) {
+
+    body {
+        background-color: #444;
+    }
+
+}

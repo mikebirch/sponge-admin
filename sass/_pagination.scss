@@ -1,0 +1,48 @@
+a.disabled {
+  pointer-events: none;
+}
+
+ul.pagination {
+
+    li a {
+      color: $pager-link-color;
+      text-decoration: none;
+      padding: .3em .5em;
+      background-color: $pager-bg;
+      border-radius: 2px;
+    }
+
+    li.active a {
+      background-color: $pager-current-bg;
+      color: $text-color;
+      cursor: default;
+    }
+
+    li.next a,
+    li.prev a {
+        background-color: transparent;
+        color: $link-text-color;
+    }
+
+    li.disabled a {
+      cursor: default;
+      color: $pager-disabled-color;
+    }
+
+}
+
+.paginator {
+
+    text-align: center;
+
+    ul.pagination li {
+      float: none;
+      display: inline-block;
+      padding: 0 .2em;
+    }
+
+    p {
+      text-align: right;
+    }
+    
+}

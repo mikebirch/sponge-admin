@@ -1,0 +1,17 @@
+#!/bin/bash
+if [ ! -d  vendor/compass ] ; then
+    cp -r  ../bower_components/compass-mixins/lib/compass vendor/compass
+fi
+
+if [ ! -d  vendor/susy ] ; then
+    cp -r  ../bower_components/susy/sass/susy vendor/susy
+fi
+
+if [ ! -f  vendor/normalize.css ] ; then
+    cp  ../bower_components/normalize.css/normalize.css vendor/normalize.css
+fi
+
+sassc -l ie.scss > ../webroot/css/ie.css
+sassc -l admin.scss > ../webroot/css/admin.css
+cleancss --skip-rebase -o ../webroot/css/admin.min.css ../webroot/css/admin.css
+cleancss --skip-rebase -o ../webroot/css/ie.min.css ../webroot/css/ie.css

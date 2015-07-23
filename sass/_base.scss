@@ -1,0 +1,70 @@
+@import "../bower_components/normalize.css/normalize";
+@import '../bower_components/susy/sass/susy/language/susy';
+@import "vendor/compass/css3";
+@import "vendor/compass/utilities/general/clearfix";
+@import "vendor/breakpoint";
+
+// colours
+// Add percentage of white to a color
+@function tint($color, $percent){
+  @return mix(white, $color, $percent);
+}
+ 
+// Add percentage of black to a color
+@function shade($color, $percent){
+  @return mix(black, $color, $percent);
+}
+$red: #e74c3c;
+$blue: #3498db;
+$green: #2ecc71;
+
+
+$text-color: #222;
+$heading-color: #222;
+$table-bg: #fff;
+$table-bg-accent: #f9f9f9;
+$table-border-color: #eee;
+$table-bg-hover: #eee;
+$link-text-color: shade($blue, 10%);
+$link-text-hover-color: shade($blue, 35%);
+$pager-bg: $blue;
+$pager-hover-bg: shade($blue, 5%);
+$pager-current-bg: tint($blue, 75%);
+$pager-link-color: tint($blue, 80%);
+$pager-disabled-color: tint($text-color, 50%);
+
+
+$body-font: 'Roboto', sans-serif;
+$heading-font: 'Roboto Condensed', sans-serif;
+
+$vertical-measure: 1.5em;
+$line-height: 1.5;
+
+
+
+@mixin hide-text {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* extend unordered lists for navigation menus */
+
+%nav-menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    list-style-image: none;
+    li {
+        list-style: none;
+        a {
+            text-decoration: none;
+            display: block;
+        }
+    }
+}

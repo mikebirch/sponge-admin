@@ -1,0 +1,107 @@
+/* layout */
+
+header {
+    font-size: .875em;
+    padding: 0;
+}
+
+.header-title {
+    display: block;
+}
+
+header, main { 
+    margin: 0;
+}
+
+header {
+    overflow: visible;
+    padding: 0;
+}
+
+.header-wrapper,
+.footer-wrapper {
+    padding: 0 1em;
+}
+
+.main-wrapper {
+    padding: 1em;
+}
+
+/* definition lists */
+
+dl {
+    width: 100%;
+    overflow: hidden;
+}
+dt {
+    float: left;
+    width: 20%;
+    clear: left;
+}
+dd {
+    float: left;
+    width: 80%;
+    margin: 0;
+}
+
+dt, dd {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding: .5em 0 1em 0;
+}
+
+dl {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* forms */
+
+.text input,
+.textarea textarea {
+    width: auto;
+}
+
+/* nav */
+
+.parent > span,
+.parent .icon-arrow-down {
+    display: none; 
+}
+
+.header-home-link span {
+    display: none;
+}
+
+.parent > span {
+    display: block; 
+}
+
+.header-home-link span {
+    display: block;
+}
+/* tables */
+
+td.actions a, 
+.no-js td.actions form { // no js means form would be display:block
+    visibility: hidden;
+}
+
+tr:hover td.actions a,
+.no-js tr:hover td.actions form {
+    visibility: visible;
+}
+
+/* icons */
+.pages--published span,
+.pages--public span{
+    clip: none;
+    height: auto;
+    margin: auto;
+    overflow: visible;
+    padding: 0;
+    position: static;
+    width: auto;
+}
+
+

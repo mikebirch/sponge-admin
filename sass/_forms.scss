@@ -1,0 +1,71 @@
+/* forms
+================================== */
+
+form {
+    margin: 0 0 3em 0;
+}
+
+.actions {
+    overflow: visible;
+}
+
+.actions form {
+    margin: 0;
+    float: left;
+    margin-right: 1em;
+}
+
+fieldset {
+    border:none;
+    margin: 0;
+    padding: 0;
+}
+
+
+.input, select {
+    margin-bottom: 1.5em;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+label span {
+    font-size:0.9em;
+    color: red;
+}
+
+input.radio,input.checkbox,input[type="submit"]{
+    width:auto;
+}
+input.radio, .checkbox input {
+    float: left;
+    clear: left;
+    width: auto;
+    height: 1.5em;
+}
+
+.checkbox label {
+    margin-left: 1.5em;
+}
+
+$sb-padding: 0.5em 1em;
+
+textarea {
+    line-height: $line-height;
+}
+
+.help {
+    margin: 0;
+    font-style: italic;
+    color: #666;
+    font-size: .875em;
+}
+
+@include breakpoint($med) {
+    .text input,
+    .textarea textarea {
+        width: 50%;
+    }
+}

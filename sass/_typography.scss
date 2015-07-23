@@ -1,0 +1,31 @@
+html {
+    font-size: 100%;
+}
+
+body {
+  color: $text-color;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6,
+legend {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 400;
+  color: $heading-color;
+}
+
+dt {
+  font-weight: 700;
+}
+
+dd {
+  margin-left: 0;
+}
+
+footer {
+    font-size: .875em;
+}
+
+header, footer {
+    letter-spacing: .5px;
+}
