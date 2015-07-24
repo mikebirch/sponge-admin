@@ -2,7 +2,7 @@ $('html').toggleClass('no-js js');
 
 $(document).ready(function() {
 	
-	/**
+    /**
      * Create delete links for each delete form (forms are hidden by CSS)
      */
 	$("td.actions form").each(function() {
@@ -22,9 +22,9 @@ $(document).ready(function() {
             '<tr id="delete_choices"><td colspan="' + 
             cells + '">Do you really want to delete this? ' +
             '<a href="#" class="btn-cancel button" id="cancel_delete">No</a> ' +
-                '<a href="#" class="btn button" id="confirm_delete" data-form="' + 
+            '<a href="#" class="btn button" id="confirm_delete" data-form="' + 
             formname + '">Yes</a>' +
-                '</td></tr>');
+            '</td></tr>');
         $("#confirm_delete").click( function() {
             var formid = $(this).data("form");
             $(formid).submit();
