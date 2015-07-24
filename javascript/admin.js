@@ -38,7 +38,7 @@ $(document).ready(function() {
         return false;
     });
 
-	/**
+    /**
      * Fade out flash messages
      */
 	var success = $('.message');
