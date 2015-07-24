@@ -22,8 +22,8 @@
         <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
         <?=
             $this->Html->css(array(
-                '/Froala/css/froala_editor.min',
-                '/Froala/css/froala_style.min'
+                '/CakephpFroalaUpload/css/froala_editor.min',
+                '/CakephpFroalaUpload/css/froala_style.min'
             ));
         ?>
         <?php endif ?>
@@ -135,12 +135,12 @@
         <?php if($froala === true) : ?>
         <?=         
         $this->Html->script(array(
-            '/Froala/js/froala_editor.min',
-            '/Froala/js/plugins/file_upload.min',
-            '/Froala/js/plugins/lists.min',
-            '/Froala/js/plugins/media_manager.min',
-            '/Froala/js/plugins/urls.min',
-            '/Froala/js/plugins/video.min',
+            '/CakephpFroalaUpload/js/froala_editor.min',
+            '/CakephpFroalaUpload/js/plugins/file_upload.min',
+            '/CakephpFroalaUpload/js/plugins/lists.min',
+            '/CakephpFroalaUpload/js/plugins/media_manager.min',
+            '/CakephpFroalaUpload/js/plugins/urls.min',
+            '/CakephpFroalaUpload/js/plugins/video.min',
             'froala-config.min'
         ));
         ?>
