@@ -11,30 +11,30 @@ $(document).ready(function() {
 	});
 
     /**
-     * Display warning message on click "delete" links
+     * Display warning message when clicking "delete" links
      * @return {boolean}     false
      */
 	$('.delete').click(function(){
- 		$('td.actions a').css('visibility', 'hidden'); // hide all action links 
- 		var formname = '#'+$(this).data("formname");
- 		var cells = $("table tr:nth-child(2) td").length;
- 		$(this).parent().parent().addClass('delete_selected').after(
+        $('td.actions a').css('visibility', 'hidden'); // hide all action links 
+        var formname = '#'+$(this).data("formname");
+        var cells = $("table tr:nth-child(2) td").length;
+        $(this).parent().parent().addClass('delete_selected').after(
             '<tr id="delete_choices"><td colspan="' + 
-			cells + '">Do you really want to delete this? ' +
-			'<a href="#" class="btn-cancel button" id="cancel_delete">No</a> ' +
-  		    '<a href="#" class="btn button" id="confirm_delete" data-form="' + 
+            cells + '">Do you really want to delete this? ' +
+            '<a href="#" class="btn-cancel button" id="cancel_delete">No</a> ' +
+                '<a href="#" class="btn button" id="confirm_delete" data-form="' + 
             formname + '">Yes</a>' +
-  		    '</td></tr>');
+                '</td></tr>');
         $("#confirm_delete").click( function() {
-    		var formid = $(this).data("form");
-    		$(formid).submit();
-    		return false;
-    	});
-    	$("#cancel_delete").click( function() {
-    	   $('#delete_choices').remove();
-    	   $('tr.delete_selected').removeClass('delete_selected');
+            var formid = $(this).data("form");
+            $(formid).submit();
+            return false;
+        });
+        $("#cancel_delete").click( function() {
+            $('#delete_choices').remove();
+            $('tr.delete_selected').removeClass('delete_selected');
             $('td.actions a').removeAttr('style'); // show all action links 
-    	});
+        });
         return false;
     });
 
