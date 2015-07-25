@@ -1,8 +1,6 @@
 # SpongeAdmin plugin for CakePHP 3
 
-*Note: This theme is not ready for use.*
-
-TODO: configuration settings, documentation.
+*Note: This theme is currently in pre-alpha status and is unsupported.*
 
 SpongeAdmin is an admin theme for the [sponge-cake](https://github.com/mikebirch/sponge-cake) plugin.
 
