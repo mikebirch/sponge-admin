@@ -43,10 +43,12 @@ class MenuHelper extends Helper
                     $liclass .=  ' sub-nav-item';
                 }
             }
-            if($loggedIn || (!$loggedIn && $page['public'])) {
-                if(isset($subNav[$page['path']])) {
+            if(isset($subNav[$page['path']])) {
+                if($loggedIn || (!$loggedIn && $subNav[$page['path']]['public'])) {
                     $link .= '<li class="'.$liclass.'"><a href="'.$subNav[$page['path']]['path'].'" title="'.$subNav[$page['path']]['nav'].'">'.$subNav[$page['path']]['nav'].'</a></li>'."\n";
-                }
+                } 
+            }
+            if($loggedIn || (!$loggedIn && $page['public'])) {
                 if ($page['path'] == $url) {
                     $link .= '<li class="active '.$liclass.'">'.$page['nav'].'</li>'."\n";   
                 } else {
