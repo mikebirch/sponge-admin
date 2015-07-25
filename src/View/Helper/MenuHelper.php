@@ -26,8 +26,11 @@ class MenuHelper extends Helper
      * @param  boolean $button      add a class to the anchor for buttons.
      * @return string               HTML — list items for the menu.
      */
-    function nav($allpages, $url, $primary = true, $loggedIn = false, $parent_slug = null, $button = false ) {
+    function nav($allpages, $url, $primary = true, $loggedIn = false, $parent_slug = null, $settings = null ) {
         $link = '';
+
+        $subNav = $settings['subNav'];
+
         foreach ($allpages as $page) {
             // home page has slug = ''
             if ($page['path'] == '/') {
@@ -41,11 +44,13 @@ class MenuHelper extends Helper
                 }
             }
             if($loggedIn || (!$loggedIn && $page['public'])) {
+                if(isset($subNav[$page['path']])) {
+                    $link .= '<li class="'.$liclass.'"><a href="'.$subNav[$page['path']]['path'].'" title="'.$subNav[$page['path']]['nav'].'">'.$subNav[$page['path']]['nav'].'</a></li>'."\n";
+                }
                 if ($page['path'] == $url) {
                     $link .= '<li class="active '.$liclass.'">'.$page['nav'].'</li>'."\n";   
                 } else {
-                    $btn = ($button) ? 'class="btn btn-link" ' : '';
-                    $link .= '<li class="'.$liclass.'"><a '.$btn.'href="'.$page['path'].'" title="'.$page['nav'].'">'.$page['nav'].'</a></li>'."\n";
+                    $link .= '<li class="'.$liclass.'"><a href="'.$page['path'].'" title="'.$page['nav'].'">'.$page['nav'].'</a></li>'."\n";
                 }
             }
         }
