@@ -1,9 +1,9 @@
 # SpongeAdmin plugin for CakePHP 3
 
-A theme for the [sponge-cake](https://github.com/mikebirch/sponge-cake) plugin.
+*Note: This theme is not ready for use.*
+
+TODO: configuration settings, documentation.
+
+SpongeAdmin is an admin theme for the [sponge-cake](https://github.com/mikebirch/sponge-cake) plugin.
 
 The [cakephp-froala-upload](https://github.com/mikebirch/cakephp-froala-upload) plugin can be used with this theme. 
-
-Load the plugin and create a config file: yourapp/webroot/js/froala-config.min.js
-
-See the [cakephp-froala-upload](https://github.com/mikebirch/cakephp-froala-upload) for an example config.
