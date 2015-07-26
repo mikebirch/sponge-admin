@@ -1,6 +1,5 @@
 <?php 
 use Cake\Core\Configure;
-use Cake\Core\Configure\Engine\PhpConfig;
 $spongeAdmin = Configure::read('spongeAdmin');
 $this->set('spongeAdmin', $spongeAdmin);
 ?>
