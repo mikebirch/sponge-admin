@@ -11,7 +11,7 @@ if($this->request->here == '/') {
 <?php
 $this->start('sidebar');
 if($content->child_contents) : ?>
-    <?php $listitems = $this->Menu->nav($content->child_contents, $this->request->here, false, $this->Auth->isLoggedIn(), $content->slug, $settings); 
+    <?php $listitems = $this->Menu->nav($content->child_contents, $this->request->here, false, $this->Auth->isLoggedIn(), $content->id, $settings); 
     if(!empty($listitems)) :
     ?>
         <div class="block">
@@ -25,7 +25,7 @@ if($content->child_contents) : ?>
 
 
 <?php if($siblings && !$content->child_contents) : ?>
-    <?php $listitems = $this->Menu->nav($siblings, $this->request->here, false, $this->Auth->isLoggedIn(), $content->parent_content->slug, $settings); 
+    <?php $listitems = $this->Menu->nav($siblings, $this->request->here, false, $this->Auth->isLoggedIn(), $content->parent_content->id, $settings); 
     if(!empty($listitems)) :
     ?>
         <div class="block">
