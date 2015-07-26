@@ -68,7 +68,7 @@ $this->set('spongeAdmin', $spongeAdmin);
                 </div>
                 <nav class="nav-collapse">
                     <ul class="primary">
-                        <?= $this->Menu->adminNav($spongeAdmin['adminNav'], $this->request->here); ?>
+                        <?= $this->AdminMenu->adminNav($spongeAdmin['adminNav'], $this->request->here); ?>
                     </ul>
                 </nav>
 

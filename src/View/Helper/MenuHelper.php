@@ -3,18 +3,12 @@
 namespace SpongeAdmin\View\Helper;
 
 use Cake\View\Helper;
-use Cake\Cache\Cache;
 
 /**
  * Helper for creating unordered list items of links for navigation menus
  */
 class MenuHelper extends Helper
 {
-    /**
-     * Use Html helper
-     * @var array
-     */
-    public $helpers = array('Html');
 
     /**
      * Creates list items for a navigation menu
@@ -22,7 +16,7 @@ class MenuHelper extends Helper
      * @param  string  $url         URL of current page.
      * @param  boolean $primary     primary navigation menu.
      * @param  boolean $loggedIn    User is logged in.
-     * @param  integer $parent_id slug of the parent record.
+     * @param  integer $parent_id   id of the parent record.
      * @param  boolean $button      add a class to the anchor for buttons.
      * @return string               HTML — list items for the menu.
      */
@@ -99,35 +93,5 @@ class MenuHelper extends Helper
             $nav.'</a></li>'."\n";
         }
         return $item;
-    }
-
-    /**
-     * Navigation menu for the admin layout, including svg icons for each link.
-     * @param  array   $allpages    array of links to be in the menu.
-     * @param  string  $url         URL of current page.
-     * @return string               HTML — list items for the menu.
-     */
-    public function adminNav($allpages, $url) {
-        $items = '';
-        foreach ($allpages as $page) {
-                
-            if(isset($page['svg'])) {
-                $svg = '<svg class="icon icon-' . 
-                $page['svg'] . '"><use xlink:href="#icon-' . $page['svg'] . 
-                '"></use></svg>';
-            } else {
-                $svg = '';
-            }
-
-            if ($page['path'] == $url) {
-                $items .= '<li class="primary-item active '. $page['liClass'] . '">' . 
-                $svg . '<span>' . $page['nav'] . '</span></li>' . "\n";   
-            } else {
-                $items .= '<li class="primary-item ' . $page['liClass'] . '"><a href="' .
-                $page['path'] . '" title="' . $page['nav'] . '">' . $svg . '<span>' . 
-                $page['nav'] . '</span>' . '</a></li>' . "\n";
-            }
-        }
-        return $items;
     }
 }
