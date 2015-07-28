@@ -20,8 +20,9 @@ class MenuHelper extends Helper
      * @param  boolean $button      add a class to the anchor for buttons.
      * @return string               HTML — list items for the menu.
      */
-    public function nav($allpages, $url, $primary = true, 
-        $loggedIn = false, $parent_id = null, $settings = null ) {
+    public function nav(
+        $allpages, $url, $primary = true, $loggedIn = false, $parent_id = null, $settings = null)
+    {
         
         $items = '';
 
@@ -85,7 +86,8 @@ class MenuHelper extends Helper
      * @param  string $nav     Name of the page in the menu
      * @return string          HTML of the list item
      */
-    private function buildItem($liClass, $url, $path, $nav) {
+    private function buildItem($liClass, $url, $path, $nav)
+    {
         if($url == $path) {
             $item = '<li class="active ' . $liClass.'">'.$nav.'</li>' . "\n";   
         } else {

@@ -25,8 +25,8 @@ class DeleteHelper extends Helper
      * @param  [type] $model [description]
      * @return [type]        [description]
      */
-    public function createForm($url = null, $model = null) {
-        // $formName adapted from the Form Helper postLink method 
+    public function createForm($url = null, $model = null)
+    {
         $formName = str_replace('.', '', uniqid('post_', true));
         $formOptions = array(
             'url' => $url,

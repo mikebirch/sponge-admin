@@ -24,7 +24,8 @@ class AdminMenuHelper extends Helper
      * @param  string  $url         URL of current page.
      * @return string               HTML — list items for the menu.
      */
-    public function adminNav($allpages, $url) {
+    public function adminNav($allpages, $url)
+    {
         $items = '';
         foreach ($allpages as $page) {
                 
