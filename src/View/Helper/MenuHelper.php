@@ -26,7 +26,11 @@ class MenuHelper extends Helper
         
         $items = '';
 
-        $subNavItems = $settings['subNav'][$parent_id];
+        $subNavItems = [];
+
+        if(isset($settings['subNav'][$parent_id])) {
+            $subNavItems = $settings['subNav'][$parent_id];
+        }
 
         $last = count($allpages)-1;
 
