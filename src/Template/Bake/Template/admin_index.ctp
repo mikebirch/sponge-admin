@@ -42,7 +42,7 @@ $pk = '$' . $singularVar . '->' . $primaryKey[0];
             <td class="actions">
                 <?= $this->Html->link(__('View'), ['action' => 'view', <%= $pk %>]) ?>
                 <?= $this->Html->link(__('Edit'), ['action' => 'edit', <%= $pk %>]) ?>
-                <?= $this->SpongeCake->deleteForm(['action' => 'delete', <%= $pk %>]) ?>
+                <?= $this->Delete->createForm(['action' => 'delete', <%= $pk %>]) ?>
             </td>
 <%        foreach ($fields as $field) {
             $isKey = false;
