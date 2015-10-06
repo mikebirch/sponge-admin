@@ -92,6 +92,7 @@ class MenuHelper extends Helper
      */
     private function buildItem($liClass, $url, $path, $nav)
     {
+        $nav = h($nav);
         if($url == $path) {
             $item = '<li class="active ' . $liClass.'">'.$nav.'</li>' . "\n";   
         } else {
