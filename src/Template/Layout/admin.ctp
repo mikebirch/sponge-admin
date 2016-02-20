@@ -111,7 +111,7 @@ $this->set('spongeAdmin', $spongeAdmin);
 
         <?= $this->fetch('script'); ?>
 
-        <?php if($settings['Site']['dev'] && $settings['Site']['useLivereload']) : ?>
+        <?php if(SERVER == 'dev' && $settings['Site']['useLivereload']) : ?>
         <?= $settings['Site']['livereload'] ?>
         <?php endif ?>
     </body>
