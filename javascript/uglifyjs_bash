@@ -7,6 +7,10 @@ if [ ! -f  ../webroot/js/vendor/jquery.min.js ] ; then
     cp ../bower_components/jquery/dist/jquery.min.js ../webroot/js/vendor/jquery.min.js
 fi
 
+if [ ! -f  ../webroot/js/vendor/svgxuse.min.js ] ; then
+    cp ../bower_components/svgxuse/svgxuse.min.js ../webroot/js/vendor/svgxuse.min.js
+fi
+
 uglifyjs vendor/responsive-nav.js \
 admin.js \
  -c -o ../webroot/js/admin.min.js
