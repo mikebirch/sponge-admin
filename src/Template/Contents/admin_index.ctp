@@ -27,8 +27,8 @@
     </td>
     <td><?php echo $this->Html->link($content->nav, array('action' => 'edit', $content->id),['escape' => false]); ?></td>
     <?php 
-        $yes = '<svg class="icon icon-checkmark-circle"><use xlink:href="#icon-checkmark-circle"></use></svg><span>Yes</span>';
-        $no = '<svg class="icon icon-cancel-circle"><use xlink:href="#icon-cancel-circle"></use></svg><span>No</span>';
+        $yes = '<svg class="icon icon-checkmark-circle"><use xlink:href="/img/admin/icons.svg#icon-checkmark-circle"></use></svg><span>Yes</span>';
+        $no = '<svg class="icon icon-cancel-circle"><use xlink:href="/img/admin/icons.svg#icon-cancel-circle"></use></svg><span>No</span>';
     ?>
     <td class="pages--published"><?= $content->published == 1 ? $yes : $no ?></td>
     <td class="pages--public"><?= $content->public == 1 ? $yes : $no ?></td>
