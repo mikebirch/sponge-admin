@@ -31,7 +31,7 @@ class AdminMenuHelper extends Helper
                 
             if(isset($page['svg'])) {
                 $svg = '<svg class="icon icon-' . 
-                $page['svg'] . '"><use xlink:href="#icon-' . $page['svg'] . 
+                $page['svg'] . '"><use xlink:href="/img/admin/icons.svg#icon-' . $page['svg'] . 
                 '"></use></svg>';
             } else {
                 $svg = '';
