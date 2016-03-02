@@ -24,11 +24,20 @@ $this->set('spongeAdmin', $spongeAdmin);
         <?= $this->Html->css('admin.min') ?>
 
         <?php if($froala === true) : ?>
-        <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+        <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/codemirror.min.css">
         <?=
             $this->Html->css(array(
-                '/CakephpFroalaUpload/css/froala_editor.min',
-                '/CakephpFroalaUpload/css/froala_style.min'
+                'froala/froala_editor.min',
+                'froala/froala_style.min',
+                'froala/plugins/code_view.min',
+                'froala/plugins/file.min',
+                'froala/plugins/fullscreen.min',
+                'froala/plugins/image.min',
+                'froala/plugins/image_manager.min',
+                'froala/plugins/line_breaker.min',
+                'froala/plugins/table.min',
+                'froala/plugins/video.min',
             ));
         ?>
         <?php endif ?>
@@ -93,17 +102,32 @@ $this->set('spongeAdmin', $spongeAdmin);
         <script>window.jQuery || document.write('<script src="/sponge_admin/js/vendor/jquery.min.js"><\/script>')</script>
 
         <?php if($froala === true) : ?>
-        <?=         
-        $this->Html->script(array(
-            '/CakephpFroalaUpload/js/froala_editor.min',
-            '/CakephpFroalaUpload/js/plugins/file_upload.min',
-            '/CakephpFroalaUpload/js/plugins/lists.min',
-            '/CakephpFroalaUpload/js/plugins/media_manager.min',
-            '/CakephpFroalaUpload/js/plugins/urls.min',
-            '/CakephpFroalaUpload/js/plugins/video.min',
-            'froala-config.min'
-        ));
+        <?php
+            echo $this->Html->script(array(
+                'froala/froala_editor.min',
+                'froala/plugins/align.min',
+                'froala/plugins/code_view.min',
+                'froala/plugins/entities.min',
+                'froala/plugins/file.min',
+                'froala/plugins/fullscreen.min',
+                'froala/plugins/image.min',
+                'froala/plugins/image_manager.min',
+                'froala/plugins/inline_style.min',
+                'froala/plugins/line_breaker.min',
+                'froala/plugins/paragraph_format.min',
+                'froala/plugins/paragraph_style.min',
+                'froala/plugins/quote.min',
+                'froala/plugins/table.min',
+                'froala/plugins/save.min',
+                'froala/plugins/url.min',
+                'froala/plugins/video.min',
+                'froala/languages/en_gb',
+                'froala-config.min'
+            ));
         ?>
+        <!-- Include Code Mirror. -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/codemirror.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/mode/xml/xml.min.js"></script>
         <?php endif ?>
 
         <?= $this->Html->script('admin.min') ?>
