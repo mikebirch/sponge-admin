@@ -36,6 +36,8 @@ $this->set('spongeAdmin', $spongeAdmin);
                 'froala/plugins/image.min',
                 'froala/plugins/image_manager.min',
                 'froala/plugins/line_breaker.min',
+                'froala/plugins/link.min',
+                'froala/plugins/lists.min',
                 'froala/plugins/table.min',
                 'froala/plugins/video.min',
             ));
