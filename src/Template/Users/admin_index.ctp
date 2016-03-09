@@ -2,7 +2,7 @@
 <?php $this->layout = 'admin'; ?>
 <h1>Users</h1>
 <?php if($userData['is_admin']) : ?>
-<p><?= $this->Html->link(__('New User'), ['action' => 'register'], array('class' => 'btn button')) ?></p>
+<p><?= $this->Html->link(__('New User'), ['action' => 'add'], array('class' => 'btn button')) ?></p>
 <?php endif ?>
 <table>
     <tr>
