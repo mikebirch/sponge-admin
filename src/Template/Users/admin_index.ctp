@@ -15,7 +15,9 @@
     <?php foreach ($users as $user) : ?>
         <tr>
             <td class="actions">
+                <?php if($userData['is_admin']) : ?>
                 <?= $this->Delete->createForm(['action' => 'delete', $user->id]) ?>
+                <?php endif ?>
                 <?= $this->Html->link(__('View'), ['action' => 'view', $user->id]) ?>
                 <?php if($userData['is_admin']) : ?>
                 <?= $this->Html->link(__('Edit'), ['action' => 'edit', $user->id]) ?>
