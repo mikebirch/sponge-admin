@@ -35,9 +35,9 @@
             <td>
                 <?php
                     if (empty($user->created)) {
-                        echo __d('user_tools', 'N/A');
+                        echo '-';
                     } else {
-                        echo h($this->Time->format($user->created, '%c'));
+                        echo h($this->Time->format($user->created, 'd MMM YYYY'));
                     }
                 ?>
             </td>
