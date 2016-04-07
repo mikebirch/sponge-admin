@@ -1,2 +1,3 @@
 /bower_components
-webroot
+webroot/css/admin.css
+webroot/css/ie.css
