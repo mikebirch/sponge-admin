@@ -23,7 +23,7 @@ $this->set('spongeAdmin', $spongeAdmin);
 
         <?= $this->Html->css('admin.min') ?>
 
-        <?php if($froala === true) : ?>
+        <?php if($spongeAdmin['froala'] === true) : ?>
         <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/codemirror.min.css">
         <?=
@@ -101,7 +101,7 @@ $this->set('spongeAdmin', $spongeAdmin);
         <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
         <script>window.jQuery || document.write('<script src="/sponge_admin/js/vendor/jquery.min.js"><\/script>')</script>
 
-        <?php if($froala === true) : ?>
+        <?php if($spongeAdmin['froala'] === true) : ?>
         <?php
             echo $this->Html->script(array(
                 'froala/froala_editor.min',
