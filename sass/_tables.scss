@@ -30,6 +30,22 @@ th {
     border-bottom: 3px solid $table-border-color;
 }
 
+.vertical-table th {
+    border-bottom: none;
+}
+
+.vertical-table tbody > tr:hover {
+    background-color: transparent;
+}
+
+.vertical-table tbody > tr:nth-child(odd) {
+    background-color: $table-bg-accent;
+}
+
+.vertical-table td {
+    width: 100%;
+}
+
 th, td {
     padding: .5em 1em;
     margin: 0;
