@@ -11,7 +11,7 @@ if [ ! -f  vendor/normalize.css ] ; then
     cp  ../bower_components/normalize.css/normalize.css vendor/normalize.css
 fi
 
-sassc -l ie.scss > ../webroot/css/ie.css
-sassc -l admin.scss > ../webroot/css/admin.css
+/usr/local/sass/sassc-3.4.2/bin/sassc -l ie.scss > ../webroot/css/ie.css
+/usr/local/sass/sassc-3.4.2/bin/sassc -l admin.scss > ../webroot/css/admin.css
 cleancss --skip-rebase -o ../webroot/css/admin.min.css ../webroot/css/admin.css
 cleancss --skip-rebase -o ../webroot/css/ie.min.css ../webroot/css/ie.css
