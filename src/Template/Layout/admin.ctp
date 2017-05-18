@@ -134,6 +134,7 @@ $this->set('spongeAdmin', $spongeAdmin);
 
         <?= $this->Html->script('admin.min') ?>
         <?= $this->Html->script('vendor/svgxuse.min', ['defer' => true]) ?>
+        <?= $this->fetch('scriptBottom') ?>
 
         <?php if(SERVER == 'dev' && $settings['Site']['useLivereload']) : ?>
         <?= $settings['Site']['livereload'] ?>

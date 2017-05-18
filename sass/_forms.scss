@@ -63,6 +63,11 @@ textarea {
     font-size: .875em;
 }
 
+.blog-post-photo-input,
+.blog-post-photo-input label{ // label is display:block above, which makes fadeToggle hide it.
+    display: none;
+}
+
 @include breakpoint($med) {
     .text input,
     .textarea textarea {
