@@ -1,6 +1,6 @@
 /* https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/_tables.scss */
 
-table {
+main table {
     background-color: $table-bg;
     padding: 0;
     margin: 0;
@@ -10,21 +10,21 @@ table {
     margin-bottom: $vertical-measure;
 }
 
-tbody > tr:nth-child(odd) {
+main tbody > tr:nth-child(odd) {
     background-color: $table-bg-accent;
 }
 
-tbody > tr:hover {
+main  tbody > tr:hover {
     background-color: $table-bg-hover;
 }
 
-caption {
+main caption {
     padding-top: .5em;
     padding-bottom: .5em;
     text-align: left;
 }
 
-th {
+main th {
     text-align: left;
     vertical-align: bottom;
     border-bottom: 3px solid $table-border-color;
@@ -46,7 +46,7 @@ th {
     width: 100%;
 }
 
-th, td {
+main th, main td {
     padding: .5em 1em;
     margin: 0;
     line-height: $line-height;
@@ -54,9 +54,9 @@ th, td {
 }
 
 // Remove top border from thead by default
-caption + thead,
-colgroup + thead,
-thead:first-child {
+main caption + thead,
+main colgroup + thead,
+main thead:first-child {
     > tr:first-child {
         > th,
         > td {
