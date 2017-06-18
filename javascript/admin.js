@@ -139,10 +139,12 @@ $(document).ready(function() {
                 '<img src="/img/loading.gif" width="32" height="32" alt="Loading" class="loading icon" />'+
             '</div>';
             if($hijaxForm === true) {
-               $('.form').prepend($overlayer); 
+                $('.form').prepend($overlayer); 
+            } elseif($('.cal__calendar').length) {
+                $('.cal__calendar').prepend($overlayer);
             } else {
                 // prepend the modal to the table cell containing the link
-            $(this).parent().prepend($overlayer);
+                $(this).parent().prepend($overlayer);
             }
             
             $("#loading").css({
