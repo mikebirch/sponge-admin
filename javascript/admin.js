@@ -112,56 +112,22 @@ $(document).ready(function() {
      * http://bakery.cakephp.org/articles/proloser/2009/07/08/serving-up-actions-as-ajax-with-jquery-in-a-few-simple-steps
      */
 
-    $('.hijax').on('click', function() {
+    $('.hijax').on('click', function(e) {
         if(isNarrowScreen() === false) {
             $('#loading').remove();
-            $('.modal').removeClass('modal');
-            $hijaxForm = false;
-            if ($(this).parent().is('td')) { // link is in a table cell
-                $(this).parents("tr").eq(0).addClass('modal'); // position modal relative to the parent tr element
-            } else if ($(this).parent().is('.input')) {
-                $('main').addClass('modal');
-                $hijaxForm = true;
-            } else {
-                $(this).parent().addClass('modal');
-            }
-            var modal = $('#overlayer');
-            if ($(modal.length)) {
-                modal.remove();
-            }
-            var $overlayer = '<div id="overlayer">'+
-            '<a href="#" class="close">X</a>'+
-            '<div id="mcontent">'+
-                '<div></div>'+
-            '</div>'+
-            '</div>'+
-            '<div id="loading">'+
-                '<img src="/img/loading.gif" width="32" height="32" alt="Loading" class="loading icon" />'+
-            '</div>';
-            if($hijaxForm === true) {
-                $('.form').prepend($overlayer); 
-            } elseif($('.cal__calendar').length) {
-                $('.cal__calendar').prepend($overlayer);
-            } else {
-                // prepend the modal to the table cell containing the link
-                $(this).parent().prepend($overlayer);
-            }
-            
-            $("#loading").css({
-                top: "5em",
-                left: '50%'
-            });
-            //console.log($(this).attr('href'));
-            $('#mcontent').load($(this).attr('href'), function() {
+            $('#dim').remove();
+            $(e.target).prepend('<div id="loading"><img src="cakephp_sponge_events/img/loading.gif" width="32" height="32" alt="Loading" /></div>');
+            $('body').prepend('<div id="dim"></div>');
+            var modal =  $('#overlayer');
+            if($(modal.length)) { modal.remove(); }
+            $('.cal__calendar').prepend('<div id="overlayer"><a href="#" class="close">X</a><div id="mcontent"><div></div></div></div>');
+            $('#mcontent').load($(e.target).attr('href'), function () {  
                 $("#overlayer").css({
                     display: 'none',
                     visibility: "visible",
                 });
                 $('#loading').remove();
                 $("#overlayer").fadeIn(300);
-                if($('#ProfileCompanyId').length) {
-                    addCompanyForm();
-                }  
             });
             return false;
         }
@@ -174,27 +140,23 @@ $(document).ready(function() {
         });
     }
 
-    /**
-     * close modal when click anywhere outside modal
-     */
-    $('body').on('click', function(e) {
-        if ($('#overlayer').length) {
+    // close modal when click anywhere outside modal
+    $(document).on('click', 'body', function(e) {
+        if($('#overlayer').length){
             var clicked = $(e.target); // get the element clicked
             if (clicked.is('#mcontent') || clicked.parents().is('#mcontent')) {
                 return; // click happened within the modal, do nothing here
             } else { // click was outside the modal, so close it
-                closeModal();
-                return false;
+               closeModal();
+               return false;
             }
         } else {
             return;
         }
     });
 
-    /**
-     * close modal when click close link
-     */
-    $('#overlayer a.close').on('click', function() {
+    // close modal when click close link
+    $(document).on('click', '#overlayer a.close', function () {
         closeModal();
         return false;
     });
