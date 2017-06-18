@@ -134,10 +134,8 @@ $(document).ready(function() {
     });
 
     function closeModal() {
-        $("#overlayer").fadeOut(300, function() {
-            $(this).remove();
-            $('.modal').removeClass('modal');
-        });
+        $("#overlayer").fadeOut(300, function() { $(this).remove(); });
+        $('#dim').remove();
     }
 
     // close modal when click anywhere outside modal
