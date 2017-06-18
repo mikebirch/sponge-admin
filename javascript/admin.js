@@ -128,6 +128,9 @@ $(document).ready(function() {
                 });
                 $('#loading').remove();
                 $("#overlayer").fadeIn(300);
+                if($('#number-booked').length) {
+                    $('#number-booked').focus();
+                }
             });
             return false;
         }
