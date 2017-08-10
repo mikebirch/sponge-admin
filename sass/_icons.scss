@@ -31,18 +31,31 @@
     color: $red;
 }
 
-.pages--published span,
-.pages--public span{
+.icon-move-up,
+.icon-move-down {
+    color: #222;
+}
+
+.item--published span,
+.item--public span,
+.hide-text span {
     @include hide-text();
 }
 
 @include breakpoint($small) {
 
     .primary .icon, .icon {
-        width: 12px;
-        height: 12px;
+        width: 14px;
+        height: 14px;
         vertical-align: baseline;
     }
+
+    .item--up .icon,
+    .item--down .icon {
+        width: 24px;
+        height: 24px;
+    }
+
 
     .parent > .icon-user {
         margin-right: .5em;
