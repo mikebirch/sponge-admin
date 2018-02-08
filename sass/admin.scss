@@ -16,6 +16,12 @@ body {
     background-color: #555;
 }
 
+body > pre {
+    background-color: #fff;
+    margin: 0;
+    padding: 0.5em 1em;
+}
+
 a {
     color: $link-text-color;
     text-decoration: none;
