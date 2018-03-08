@@ -120,7 +120,7 @@ $(document).ready(function() {
             $('body').prepend('<div id="dim"></div>');
             var modal =  $('#overlayer');
             if($(modal.length)) { modal.remove(); }
-            $('.cal__calendar').prepend('<div id="overlayer"><a href="#" class="close">X</a><div id="mcontent"><div></div></div></div>');
+            $('main').prepend('<div id="overlayer"><a href="#" class="close">X</a><div id="mcontent"><div></div></div></div>');
             $('#mcontent').load($(e.target).attr('href'), function () {  
                 $("#overlayer").css({
                     display: 'none',
