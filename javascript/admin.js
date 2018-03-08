@@ -116,7 +116,7 @@ $(document).ready(function() {
         if(isNarrowScreen() === false) {
             $('#loading').remove();
             $('#dim').remove();
-            $(e.target).prepend('<div id="loading"><img src="sponge_admin/img/loading.gif" width="32" height="32" alt="Loading" /></div>');
+            $(e.target).prepend('<div id="loading"><img src="/sponge_admin/img/loading.gif" width="32" height="32" alt="Loading" /></div>');
             $('body').prepend('<div id="dim"></div>');
             var modal =  $('#overlayer');
             if($(modal.length)) { modal.remove(); }
