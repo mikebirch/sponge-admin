@@ -69,8 +69,12 @@ textarea {
 }
 
 @include breakpoint($med) {
-    .text input,
+    .input input,
     .textarea textarea {
         width: 50%;
+    }
+
+    input.radio, .checkbox input {
+        width: auto;
     }
 }
