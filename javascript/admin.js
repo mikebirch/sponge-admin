@@ -14,7 +14,7 @@ $(document).ready(function() {
      * Display warning message when clicking "delete" links
      * @return {boolean}     false
      */
-	$('.delete').click(function(){
+    $(document).on('click', '.delete', function(event) {
         $('td.actions a').css('visibility', 'hidden'); // hide all action links 
         var formname = '#'+$(this).data("formname");
         var cells = $("table tr:nth-child(2) td").length;
