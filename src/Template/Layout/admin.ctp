@@ -49,7 +49,7 @@ $this->set('spongeAdmin', $spongeAdmin);
         <![endif]-->
         
     </head>
-    <body>
+    <body id="admin">
         <div class="header-wrapper">
             <header role="banner">
 
@@ -84,7 +84,7 @@ $this->set('spongeAdmin', $spongeAdmin);
             
         </div>
         <div class="main-wrapper">
-            <main id="admin-main">
+            <main>
 
                 <?= $this->Flash->render() ?>
                 <?= $this->Flash->render('auth') ?>
