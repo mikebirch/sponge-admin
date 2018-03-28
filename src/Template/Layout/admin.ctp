@@ -84,7 +84,7 @@ $this->set('spongeAdmin', $spongeAdmin);
             
         </div>
         <div class="main-wrapper">
-            <main role="main">
+            <main id="admin-main">
 
                 <?= $this->Flash->render() ?>
                 <?= $this->Flash->render('auth') ?>
