@@ -141,11 +141,14 @@ $(document).ready(function() {
         $('#dim').remove();
     }
 
-    // close modal when click anywhere outside modal
+    // close modal when click anywhere outside modal except date and time pickers
     $(document).on('click', 'body', function(e) {
         if($('#overlayer').length){
             var clicked = $(e.target); // get the element clicked
-            if (clicked.is('#mcontent') || clicked.parents().is('#mcontent')) {
+            if (clicked.is('#mcontent') || 
+                clicked.parents().is('#mcontent') ||
+                clicked.is(".ui-timepicker-container a") || // not timepicker
+                clicked.is(".Zebra_DatePicker td")) { // not Zebra date picker
                 return; // click happened within the modal, do nothing here
             } else { // click was outside the modal, so close it
                closeModal();
