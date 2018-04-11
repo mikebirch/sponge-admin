@@ -19,7 +19,7 @@ $this->set('spongeAdmin', $spongeAdmin);
         <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png" />
         <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png" />
 
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic|Roboto+Condensed' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic|Roboto+Condensed' rel='stylesheet' type='text/css'>
 
         <?= $this->Html->css('admin.min') ?>
 
