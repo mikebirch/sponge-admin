@@ -47,11 +47,14 @@ class AdminMenuHelper extends Helper
                 $items .= '<li class="primary-item active '. $page['liClass'] . '">' . 
                 $svg . '<span>' . $page['linkTitle'] . '</span></li>' . "\n";   
             } else {
+                if (!isset($page['query'])) $page['query'] = null;
                 $items .= '<li class="primary-item ' . $page['liClass'] . '">' .
                 $this->Html->link($svg . '<span>' . $page['linkTitle'] . '</span>', [
                     'plugin' => $page['plugin'], 
                     'controller' => $page['controller'], 
-                    'action' => $page['action']], ['escape' => false]) . '</li>' . "\n";
+                    'action' => $page['action'],
+                    '?' => $page['query']
+                ], ['escape' => false]) . '</li>' . "\n";
             }
         }
         return $items;
