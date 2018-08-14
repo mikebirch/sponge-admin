@@ -49,5 +49,5 @@ $compact = ["'" . $singularName . "'"];
 %>
         $this->set(compact(<%= join(', ', $compact) %>));
         $this->set('_serialize', ['<%=$singularName%>']);
-        $this->layout = 'admin';
+        $this->viewBuilder()->layout('admin');
     }

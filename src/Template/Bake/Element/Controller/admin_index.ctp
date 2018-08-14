@@ -29,5 +29,5 @@
 <% endif; %>
         $this->set('<%= $pluralName %>', $this->paginate($this-><%= $currentModelName %>));
         $this->set('_serialize', ['<%= $pluralName %>']);
-        $this->layout = 'admin';
+        $this->viewBuilder()->layout('admin');
     }
