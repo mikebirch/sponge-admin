@@ -106,6 +106,7 @@ $this->set('spongeAdmin', $spongeAdmin);
             echo $this->Html->script(array(
                 'froala/froala_editor.min',
                 'froala/plugins/align.min',
+                'froala/plugins/code_beautifier.min',
                 'froala/plugins/code_view.min',
                 'froala/plugins/entities.min',
                 'froala/plugins/file.min',
