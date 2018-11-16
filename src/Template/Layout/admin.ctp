@@ -24,7 +24,7 @@ $this->set('spongeAdmin', $spongeAdmin);
         <?= $this->Html->css('admin.min') ?>
 
         <?php if($spongeAdmin['froala'] === true) : ?>
-        <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/codemirror.min.css">
         <?=
             $this->Html->css(array(
