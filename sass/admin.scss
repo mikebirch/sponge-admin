@@ -70,10 +70,6 @@ ul#photos li {
     vertical-align: top;
 }
 
-.fr-wrapper div:first-child {
-    display: none;
-}
-
 @include breakpoint($med) {
 
     body {
