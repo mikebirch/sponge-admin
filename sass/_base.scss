@@ -1,4 +1,4 @@
-@import "../bower_components/normalize.css/normalize";
+@import "vendor/normalize";
 @import '../bower_components/susy/sass/susy/language/susy';
 @import "vendor/compass/css3";
 @import "vendor/compass/utilities/general/clearfix";
@@ -9,7 +9,7 @@
 @function tint($color, $percent){
   @return mix(white, $color, $percent);
 }
- 
+
 // Add percentage of black to a color
 @function shade($color, $percent){
   @return mix(black, $color, $percent);
