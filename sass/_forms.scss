@@ -36,6 +36,12 @@ label span {
     color: red;
 }
 
+label span.meta {
+    font-size:0.9em;
+    color: $text-color;
+    font-weight: 400;
+}
+
 input.radio,input.checkbox,input[type="submit"]{
     width:auto;
 }

@@ -13,7 +13,12 @@
             }
         }
         if($userData['is_admin'] == true) {
-            echo $this->Form->input('description');
+            echo $this->Form->input('description', [
+                'label' => [
+                    'text' => 'Meta Description<br /><span class="meta">This is a tag which is used by search engines. <a href="https://moz.com/learn/seo/meta-description">Learn about meta descriptions</a>.</span>',
+                    'escape' => false
+                ]
+            ]);
         }
         echo $this->Form->input('nav');
         if($this->request->params['pass'][0] != 1){ // not for home page
