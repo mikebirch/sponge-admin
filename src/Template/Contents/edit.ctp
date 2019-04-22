@@ -4,31 +4,31 @@
 <fieldset>
     <legend><?= __('Edit page') ?></legend>
     <?php
-        if($this->request->params['pass'][0] != 1){ // not for home page
-            if($userData['is_admin'] == true) {
-                echo $this->Form->input('slug');
-                echo $this->Form->input('parent_id', ['options' => $parents, 'empty' => true]);
+        if($content->id != 1){ // not for home page
+            if($userData['is_superuser'] == true) {
+                echo $this->Form->control('slug');
+                echo $this->Form->control('parent_id', ['options' => $parents, 'empty' => true]);
             } else {
-                echo $this->Form->input('slug', array('type' => 'hidden'));
+                echo $this->Form->control('slug', array('type' => 'hidden'));
             }
         }
-        if($userData['is_admin'] == true) {
-            echo $this->Form->input('description', [
+        if($userData['is_superuser'] == true) {
+            echo $this->Form->control('description', [
                 'label' => [
                     'text' => 'Meta Description<br /><span class="meta">This is a tag which is used by search engines. <a href="https://moz.com/learn/seo/meta-description">Learn about meta descriptions</a>.</span>',
                     'escape' => false
                 ]
             ]);
         }
-        echo $this->Form->input('nav');
-        if($this->request->params['pass'][0] != 1){ // not for home page
-            echo $this->Form->input('title');
+        echo $this->Form->control('nav');
+        if($content->id != 1){ // not for home page
+            echo $this->Form->control('title');
         }
-        echo $this->Form->input('body', ['class' => 'froala']);
-        echo $this->Form->input('sidebar', ['class' => 'froala']);
-        if($this->request->params['pass'][0] != 1){ // not for home page
-            echo $this->Form->input('public');
-            echo $this->Form->input('published');
+        echo $this->Form->control('body', ['class' => 'froala']);
+        echo $this->Form->control('sidebar', ['class' => 'froala']);
+        if($content->id != 1){ // not for home page
+            echo $this->Form->control('public');
+            echo $this->Form->control('published');
         }
     ?>
 </fieldset>
