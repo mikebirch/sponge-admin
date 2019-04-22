@@ -60,7 +60,7 @@ if($spongeAdmin['froala'] === true) {
                 </div>
                 <nav class="nav-collapse">
                     <ul class="primary">
-                        <?= $this->AdminMenu->adminNav($spongeAdmin['adminNav'], $this->request->getAttribute('here')); ?>
+                        <?= $this->AdminMenu->adminNav($spongeAdmin['adminNav'], $this->request->getAttribute('here'), $userData); ?>
                     </ul>
                 </nav>
 

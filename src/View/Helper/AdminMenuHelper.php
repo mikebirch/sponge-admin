@@ -7,7 +7,7 @@ use Cake\Routing\Router;
 use Cake\Cache\Cache;
 
 /**
- * Helper for creating an unordered list items of links 
+ * Helper for creating an unordered list items of links
  * for the main admin navigation menu.
  */
 class AdminMenuHelper extends Helper
@@ -24,37 +24,39 @@ class AdminMenuHelper extends Helper
      * @param  string  $url         URL of current page.
      * @return string               HTML — list items for the menu.
      */
-    public function adminNav($allpages, $url)
+    public function adminNav($allpages, $url, $userData)
     {
         $items = '';
         foreach ($allpages as $page) {
-                
+
             if(isset($page['svg'])) {
-                $svg = '<svg class="icon icon-' . 
-                $page['svg'] . '"><use xlink:href="/img/admin/icons.svg#icon-' . $page['svg'] . 
+                $svg = '<svg class="icon icon-' .
+                $page['svg'] . '"><use xlink:href="/img/admin/icons.svg#icon-' . $page['svg'] .
                 '"></use></svg>';
             } else {
                 $svg = '';
             }
 
-            $pageUrl = Router::url([
-                'plugin' => $page['plugin'], 
-                    'controller' => $page['controller'], 
-                    'action' => $page['action']
-                ]);
+            if($userData['is_superuser'] || ($userData['role'] == 'admin' && $page['adminRoleAccess'])) {
+                $pageUrl = Router::url([
+                    'plugin' => $page['plugin'],
+                        'controller' => $page['controller'],
+                        'action' => $page['action']
+                    ]);
 
-            if ($pageUrl == $url) {
-                $items .= '<li class="primary-item active '. $page['liClass'] . '">' . 
-                $svg . '<span>' . $page['linkTitle'] . '</span></li>' . "\n";   
-            } else {
-                if (!isset($page['query'])) $page['query'] = null;
-                $items .= '<li class="primary-item ' . $page['liClass'] . '">' .
-                $this->Html->link($svg . '<span>' . $page['linkTitle'] . '</span>', [
-                    'plugin' => $page['plugin'], 
-                    'controller' => $page['controller'], 
-                    'action' => $page['action'],
-                    '?' => $page['query']
-                ], ['escape' => false]) . '</li>' . "\n";
+                if ($pageUrl == $url) {
+                    $items .= '<li class="primary-item active '. $page['liClass'] . '">' .
+                    $svg . '<span>' . $page['linkTitle'] . '</span></li>' . "\n";
+                } else {
+                    if (!isset($page['query'])) $page['query'] = null;
+                    $items .= '<li class="primary-item ' . $page['liClass'] . '">' .
+                    $this->Html->link($svg . '<span>' . $page['linkTitle'] . '</span>', [
+                        'plugin' => $page['plugin'],
+                        'controller' => $page['controller'],
+                        'action' => $page['action'],
+                        '?' => $page['query']
+                    ], ['escape' => false]) . '</li>' . "\n";
+                }
             }
         }
         return $items;
