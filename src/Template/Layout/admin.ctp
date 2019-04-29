@@ -88,18 +88,8 @@ if($spongeAdmin['froala'] === true) {
         <?= $this->Html->script('vendor/svgxuse.min', ['defer' => true]) ?>
         <?= $this->fetch('scriptBottom') ?>
 
-        <?php
-        if (isset($settings['Site']['livereload'])) {
-            switch ($settings['Site']['livereload']) {
-                case 'dev':
-                    echo "<script>document.write('<script src=\"http://localhost:35729/livereload.js?snipver=1\"></' + 'script>')</script>";
-                    break;
-
-                case 'localdev':
-                    echo "<script>document.write('<script src=\"http://192.168.0.100:35729/livereload.js?snipver=1\"></' + 'script>')</script>";
-                    break;
-            }
-        }
-        ?>
+        <?php if(SERVER == 'dev' && $settings['Site']['useLivereload']) : ?>
+        <?= $settings['Site']['livereload'] ?>
+        <?php endif ?>
     </body>
 </html>
