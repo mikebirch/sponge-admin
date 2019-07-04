@@ -1,7 +1,7 @@
 $('html').toggleClass('no-js js');
 
 $(document).ready(function() {
-	
+
     /**
      * Create delete links for each delete form (forms are hidden by CSS)
      */
@@ -33,7 +33,7 @@ $(document).ready(function() {
         $("#cancel_delete").click( function() {
             $('#delete_choices').remove();
             $('tr.delete_selected').removeClass('delete_selected');
-            $('td.actions a').removeAttr('style'); // show all action links 
+            $('td.actions a').removeAttr('style'); // show all action links
         });
         return false;
     });
@@ -43,7 +43,7 @@ $(document).ready(function() {
      */
 	var success = $('.message');
 	if(success.length) {
-		success.animate({opacity: 1.0}, 2000).fadeOut();	
+		success.animate({opacity: 1.0}, 2000).fadeOut();
 		success.fadeOut(3000);
 	}
 
@@ -51,7 +51,7 @@ $(document).ready(function() {
      * enable responsive main navigation menu, see responsive-nav.js
      */
     var nav = responsiveNav(".nav-collapse", {
-    open: function(){ 
+    open: function(){
         // when opening the menu, close the user menu, if it's open.
         var subnav = $('.sub-nav');
         if (subnav.is(':visible')) {
@@ -65,13 +65,13 @@ $(document).ready(function() {
         /**
          * Determine screen width based on generated content.
          * Generated content is added to the body within a media query.
-         * see http://adactio.com/journal/5429/ 
+         * see http://adactio.com/journal/5429/
          * @return {Boolean}
          */
         function isNarrowScreen() {
             var size = window.getComputedStyle(document.body,':after').getPropertyValue('content');
-            if (size.indexOf("smallscreen") !=-1 
-            || size.indexOf("mediumscreen") !=-1 
+            if (size.indexOf("smallscreen") !=-1
+            || size.indexOf("mediumscreen") !=-1
             || size.indexOf("widescreen") !=-1 ) {
                 return false;
             } else {
@@ -121,7 +121,7 @@ $(document).ready(function() {
             var modal =  $('#overlayer');
             if($(modal.length)) { modal.remove(); }
             $('main').prepend('<div id="overlayer"><a href="#" class="close">X</a><div id="mcontent"><div></div></div></div>');
-            $('#mcontent').load($(e.target).attr('href'), function () {  
+            $('#mcontent').load($(e.target).attr('href'), function () {
                 $("#overlayer").css({
                     display: 'none',
                     visibility: "visible",
@@ -145,7 +145,7 @@ $(document).ready(function() {
     $(document).on('click', 'body', function(e) {
         if($('#overlayer').length){
             var clicked = $(e.target); // get the element clicked
-            if (clicked.is('#mcontent') || 
+            if (clicked.is('#mcontent') ||
                 clicked.parents().is('#mcontent') ||
                 clicked.is(".ui-timepicker-container a") || // not timepicker
                 clicked.is(".Zebra_DatePicker td")) { // not Zebra date picker
