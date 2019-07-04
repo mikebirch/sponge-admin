@@ -1,0 +1,9 @@
+{
+    "name": "sponge-admin",
+    "version": "1.0.0",
+    "description": "Sponge Admin plugin",
+    "author": "Mike Birch",
+    "dependencies": {
+        "svg4everybody": "^2.1.9"
+    }
+}

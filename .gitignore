@@ -1,3 +1,4 @@
 /bower_components
 webroot/css/admin.css
 webroot/css/ie.css
+node_modules
