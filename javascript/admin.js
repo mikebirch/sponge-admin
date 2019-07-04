@@ -15,15 +15,15 @@ $(document).ready(function() {
      * @return {boolean}     false
      */
     $(document).on('click', '.delete', function(event) {
-        $('td.actions a').css('visibility', 'hidden'); // hide all action links 
+        $('td.actions a').css('visibility', 'hidden'); // hide all action links
         var formname = '#'+$(this).data("formname");
         var cells = $("table tr:nth-child(2) td").length;
         $(this).parent().parent().addClass('delete_selected').after(
-            '<tr id="delete_choices"><td colspan="' + 
+            '<tr id="delete_choices"><td colspan="' +
             cells + '">Do you really want to delete this? ' +
-            '<a href="#" class="btn-cancel button" id="cancel_delete">No</a> ' +
-            '<a href="#" class="btn button" id="confirm_delete" data-form="' + 
-            formname + '">Yes</a>' +
+            '<a href="#" class="btn-cancel button" id="cancel_delete">Cancel</a> ' +
+            '<a href="#" class="btn button" id="confirm_delete" data-form="' +
+            formname + '">Delete</a>' +
             '</td></tr>');
         $("#confirm_delete").click( function() {
             var formid = $(this).data("form");
