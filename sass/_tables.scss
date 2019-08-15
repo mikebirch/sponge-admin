@@ -148,10 +148,4 @@ td.actions a:hover {
     background-color: #fff;
     text-decoration: none;
     border-radius: 2px;
-} 
-
-.js #delete_choices,
-.js .delete_selected {
-    background-color: tint($red, 80%);
-    box-shadow: -0.5em 0 0 $red;
 }

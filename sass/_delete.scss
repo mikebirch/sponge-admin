@@ -1,0 +1,13 @@
+.js #delete_choices,
+.js .delete_selected {
+    background-color: tint($red, 80%);
+    box-shadow: -0.5em 0 0 $red;
+}
+
+.js p#delete_choices,
+.js p.delete_selected {
+    background: none;
+    box-shadow: none;
+    color: $red;
+    padding: 0.5em 0;
+}

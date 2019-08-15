@@ -38,6 +38,34 @@ $(document).ready(function() {
         return false;
     });
 
+    $(".actions-menu form").each(function() {
+        $(this).after('<a href="#" class="actions-menu-delete" data-formname="'+
+        $(this).attr('id')+'">Delete</a>');
+        $(this).hide();
+    });
+
+    $(document).on('click', '.actions-menu-delete', function(event) {
+        $('.actions-menu li').css('visibility', 'hidden'); // hide all action items
+        var formname = '#'+$(this).data("formname");
+        $(this).parent().parent().after(
+            '<p class="delete_selected" id="delete_choices">Do you really want to delete this? ' +
+            '<a href="#" class="btn-cancel button" id="cancel_delete">Cancel</a> ' +
+            '<a href="#" class="btn button" id="confirm_delete" data-form="' +
+            formname + '">Delete</a>' +
+            '</p>');
+        $("#confirm_delete").click( function() {
+            var formid = $(this).data("form");
+            $(formid).submit();
+            return false;
+        });
+        $("#cancel_delete").click( function() {
+            $('#delete_choices').remove();
+            $('tr.delete_selected').removeClass('delete_selected');
+            $('.actions-menu li').removeAttr('style'); // show all action links
+        });
+        return false;
+    });
+
     /**
      * Fade out flash messages
      */
