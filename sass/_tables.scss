@@ -70,11 +70,11 @@ main thead:first-child {
 }
 
 /*
-Responsive tables, from Bootstrap: 
-https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/_tables.scss 
+Responsive tables, from Bootstrap:
+https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/_tables.scss
  */
 
-// Responsive tables 
+// Responsive tables
 //
 // Wrap your tables in `.table-responsive` and we'll make them mobile friendly
 // by enabling horizontal scrolling. Only applies <768px. Everything above that
@@ -128,7 +128,7 @@ td.actions {
 
     // show and hide action links and delete form
 
-    td.actions a, 
+    td.actions a,
     .no-js td.actions form { // no js means form would be display:block
         visibility: hidden;
     }
@@ -140,7 +140,7 @@ td.actions {
 
 }
 
-td.actions a { 
+td.actions a {
     padding: 0.5em;
 }
 

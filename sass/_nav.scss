@@ -31,7 +31,7 @@
 
 .parent > span,
 .parent .icon-arrow-down {
-    display: none; 
+    display: none;
 }
 
 .header-home-link span {
@@ -46,7 +46,7 @@
 
 .sub-nav {
     @include border-radius(3px);
-    
+
 }
 
 .js .sub-nav {
@@ -58,7 +58,7 @@ li.parent:hover {
 }
 
 .sub-nav {
-    display: none; 
+    display: none;
 }
 
 // fallback in case of no JavaScript
@@ -227,5 +227,4 @@ li.parent:hover {
         top: 50%;
         width: 0;
     }
-
 }

@@ -14,7 +14,7 @@ $wide : 1300px;
     @include box-sizing(border-box);
 }
 
-main { 
+main {
     @include container(120em);
 }
 
@@ -119,7 +119,7 @@ footer {
         display: none;
     }
 
-    header, main { 
+    header, main {
         margin: 0;
     }
 
@@ -144,7 +144,7 @@ footer {
         padding: 0.5em 0 0 1em;
     }
 
-    .main-wrapper { 
+    .main-wrapper {
         margin: 0 0 0 9em; // match nav width
         overflow: none;
         min-height: 500px;

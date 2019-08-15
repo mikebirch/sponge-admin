@@ -8,7 +8,7 @@ $(document).ready(function() {
 	$("td.actions form").each(function() {
 	    $(this).after('<a href="#" class="delete" data-formname="'+
             $(this).attr('id')+'">Delete</a>');
-	});
+    });
 
     /**
      * Display warning message when clicking "delete" links
