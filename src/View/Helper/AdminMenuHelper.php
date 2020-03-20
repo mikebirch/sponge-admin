@@ -37,7 +37,7 @@ class AdminMenuHelper extends Helper
                 $svg = '';
             }
 
-            if($userData['is_superuser'] || ($userData['role'] == 'admin' && $page['adminRoleAccess'])) {
+            if($userData['is_admin'] || ($userData['role'] == 'admin' && $page['adminRoleAccess'])) {
                 $pageUrl = Router::url([
                     'plugin' => $page['plugin'],
                         'controller' => $page['controller'],
