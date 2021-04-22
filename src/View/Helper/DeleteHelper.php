@@ -5,10 +5,10 @@ namespace SpongeAdmin\View\Helper;
 use Cake\View\Helper;
 
 /**
- * Helper for creating a form for deleting records. 
+ * Helper for creating a form for deleting records.
  * Replaces the postLink method in Form Helper with a form that doesn't require JavaScript.
  * This allows progressive enhancement with CSS and jQuery in this theme.
- * Warnings are displayed adjacent to the record being deleted. Users who don’t 
+ * Warnings are displayed adjacent to the record being deleted. Users who don’t
  * have JavaScript enabled will still be able to delete records, but they don’t get any warnings.
  */
 class DeleteHelper extends Helper
@@ -30,7 +30,8 @@ class DeleteHelper extends Helper
         $formName = str_replace('.', '', uniqid('post_', true));
         $formOptions = array(
             'url' => $url,
-            'id' => $formName
+            'id' => $formName,
+            'class' => 'form-delete'
         );
         $out = $this->Form->create($model, $formOptions);
         $out .= $this->Form->submit('Delete');

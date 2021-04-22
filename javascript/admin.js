@@ -3,9 +3,9 @@ $('html').toggleClass('no-js js');
 $(document).ready(function() {
 
     /**
-     * Create delete links for each delete form (forms are hidden by CSS)
+     * Create links for each admin form (forms are hidden by CSS)
      */
-	$("td.actions form").each(function() {
+	$("td.actions .form-delete").each(function() {
 	    $(this).after('<a href="#" class="delete" data-formname="'+
             $(this).attr('id')+'">Delete</a>');
     });
