@@ -3,7 +3,7 @@
 <h1>Pages</h1>
 
 <?php if($userData['is_superuser']) : ?>
-<p><?php echo $this->Html->link('New Page', array('action' => 'add'), array('class' => 'btn button')); ?></p>
+<p><?php echo $this->Html->link('New Page', ['action' => 'add'], ['class' => 'btn button']); ?></p>
 <?php endif ?>
 
 <div class="table-responsive"><table class="table-striped">
@@ -24,12 +24,12 @@
 <tr>
     <td class="actions">
         <?php if($userData['is_superuser']) : ?>
-        <?php echo $this->Delete->createForm(array('action' => 'delete', $content->id)) ?>
+        <?php echo $this->Delete->createForm(['action' => 'delete', $content->id]) ?>
         <?php endif ?>
         <a href="<?= $content->path ?>">View</a>
-        <?php echo $this->Html->link('Edit', array('action' => 'edit', $content->id)); ?>
+        <?php echo $this->Html->link('Edit', ['action' => 'edit', $content->id]); ?>
     </td>
-    <td><?php echo $this->Html->link($content->nav, array('action' => 'edit', $content->id),['escape' => false]); ?></td>
+    <td><?php echo $this->Html->link($content->nav, ['action' => 'edit', $content->id],['escape' => false]); ?></td>
     <?php
         $yes = '<svg class="icon icon-checkmark-circle"><use xlink:href="/img/admin/icons.svg#icon-checkmark-circle"></use></svg><span>Yes</span>';
         $no = '<svg class="icon icon-cancel-circle"><use xlink:href="/img/admin/icons.svg#icon-cancel-circle"></use></svg><span>No</span>';
@@ -39,8 +39,8 @@
     <td class="item--published hide-text"><?= $content->published == 1 ? $yes : $no ?></td>
     <td class="item--public hide-text"><?= $content->public == 1 ? $yes : $no ?></td>
     <?php if($userData['is_superuser']) : ?>
-    <td class="item--up hide-text"><?php echo $this->Html->link($up, array('action' => 'moveUp', $content->id),['escape' => false]); ?></td>
-    <td class="item--down hide-text"><?php echo $this->Html->link($down, array('action' => 'moveDown', $content->id),['escape' => false]); ?></td>
+    <td class="item--up hide-text"><?php echo $this->Html->link($up, ['action' => 'moveUp', $content->id],['escape' => false]); ?></td>
+    <td class="item--down hide-text"><?php echo $this->Html->link($down, ['action' => 'moveDown', $content->id],['escape' => false]); ?></td>
     <?php endif ?>
 </tr>
 <?php endforeach; ?>

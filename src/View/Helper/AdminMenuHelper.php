@@ -16,7 +16,7 @@ class AdminMenuHelper extends Helper
      * Use Html helper
      * @var array
      */
-    public $helpers = array('Html');
+    public $helpers = ['Html'];
 
     /**
      * Navigation menu for the admin layout, including svg icons for each link.

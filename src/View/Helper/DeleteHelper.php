@@ -17,8 +17,7 @@ class DeleteHelper extends Helper
      * Use Form helper
      * @var array
      */
-    public $helpers = array('Form');
-
+    public $helpers = ['Form'];
     /**
      * Create a form for deleting a record
      * @param  string $url   URL
@@ -28,11 +27,11 @@ class DeleteHelper extends Helper
     public function createForm($url = null, $model = null)
     {
         $formName = str_replace('.', '', uniqid('post_', true));
-        $formOptions = array(
+        $formOptions = [
             'url' => $url,
             'id' => $formName,
             'class' => 'form-delete'
-        );
+        ];
         $out = $this->Form->create($model, $formOptions);
         $out .= $this->Form->submit('Delete');
         $out .= $this->Form->end();

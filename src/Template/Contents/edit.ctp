@@ -9,7 +9,7 @@
                 echo $this->Form->control('slug');
                 echo $this->Form->control('parent_id', ['options' => $parents, 'empty' => true]);
             } else {
-                echo $this->Form->control('slug', array('type' => 'hidden'));
+                echo $this->Form->control('slug', ['type' => 'hidden']);
             }
         }
         if($userData['is_superuser'] == true) {
