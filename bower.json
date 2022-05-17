@@ -1,5 +1,5 @@
 {
-  "name": "Sponge Admin",
+  "name": "sponge-admin",
   "version": "0.0.1",
   "private": true,
   "authors": [
@@ -21,7 +21,6 @@
     "susy": "~2.2.5",
     "compass-mixins": "~0.12.7",
     "normalize.css": "~3.0.3",
-    "responsive-nav": "~1.0.39",
-    "svgxuse": "^1.1.7"
+    "responsive-nav": "~1.0.39"
   }
 }
