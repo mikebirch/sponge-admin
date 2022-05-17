@@ -67,15 +67,6 @@ $(document).ready(function() {
     });
 
     /**
-     * Fade out flash messages
-     */
-	var success = $('.message');
-	if(success.length) {
-		success.animate({opacity: 1.0}, 2000).fadeOut();
-		success.fadeOut(3000);
-	}
-
-    /**
      * enable responsive main navigation menu, see responsive-nav.js
      */
     var nav = responsiveNav(".nav-collapse", {
