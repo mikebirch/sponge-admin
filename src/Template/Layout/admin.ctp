@@ -13,7 +13,7 @@ if($spongeAdmin['froala'] === true) {
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title><?= $this->fetch('title'); ?></title>
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic|Roboto+Condensed' rel='stylesheet' type='text/css'>
-        <?= $this->Html->css('admin.min') ?>
+        <?= $this->Html->css('admin-v1.min') ?>
         <?= $this->fetch('css'); ?>
         <!--[if lt IE 9]>
         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>

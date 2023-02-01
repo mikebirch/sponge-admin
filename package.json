@@ -3,7 +3,20 @@
     "version": "1.0.0",
     "description": "Sponge Admin plugin",
     "author": "Mike Birch",
-    "dependencies": {
-        "svg4everybody": "^2.1.9"
+    "config": {
+        "admin_css_version": "1"
+    },
+    "devDependencies": {
+        "autoprefixer": "^10.4.7",
+        "browser-sync": "^2.27.10",
+        "cssnano": "^5.1.8",
+        "postcss": "^8.4.13",
+        "postcss-cli": "^9.1.0"
+    },
+    "scripts": {
+        "build": "sass --source-map-urls=absolute sass/admin.scss:webroot/css/admin-v$npm_package_config_admin_css_version.min.css",
+        "postbuild": "postcss webroot/css/admin-v$npm_package_config_admin_css_version.min.css -u autoprefixer cssnano -r",
+        "watch": "sass --source-map-urls=absolute --watch sass/admin.scss:webroot/css/admin-v$npm_package_config_admin_css_version.css",
+        "reload": "browser-sync start --proxy 'sc310:9999' --host '192.168.5.123' --files 'webroot'"
     }
 }
