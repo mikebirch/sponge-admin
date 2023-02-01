@@ -3,7 +3,7 @@
 <h1>Pages</h1>
 
 <?php if($userData['is_superuser']) : ?>
-<p><?php echo $this->Html->link('New Page', ['action' => 'add'], ['class' => 'btn button']); ?></p>
+<p><?php echo $this->Html->link('New Page', ['action' => 'add'], ['class' => 'btn button hijax-panel']); ?></p>
 <?php endif ?>
 
 <div class="table-responsive"><table class="table-striped">
@@ -27,9 +27,9 @@
         <?php echo $this->Delete->createForm(['action' => 'delete', $content->id]) ?>
         <?php endif ?>
         <a href="<?= $content->path ?>">View</a>
-        <?php echo $this->Html->link('Edit', ['action' => 'edit', $content->id]); ?>
+        <?php echo $this->Html->link('Edit', ['action' => 'edit', $content->id], ['class' => 'hijax-panel']); ?>
     </td>
-    <td><?php echo $this->Html->link($content->nav, ['action' => 'edit', $content->id],['escape' => false]); ?></td>
+    <td><?php echo $this->Html->link($content->nav, ['action' => 'edit', $content->id],['escape' => false, 'class' => 'hijax-panel']); ?></td>
     <?php
         $yes = '<svg class="icon icon-checkmark-circle"><use xlink:href="/img/admin/icons.svg#icon-checkmark-circle"></use></svg><span>Yes</span>';
         $no = '<svg class="icon icon-cancel-circle"><use xlink:href="/img/admin/icons.svg#icon-cancel-circle"></use></svg><span>No</span>';
