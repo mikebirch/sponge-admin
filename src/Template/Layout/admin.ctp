@@ -71,7 +71,8 @@ if($spongeAdmin['froala'] === true) {
         </div>
         <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
         <script>window.jQuery || document.write('<script src="/sponge_admin/js/vendor/jquery.min.js"><\/script>')</script>
-        <?= $this->Html->script('admin.min') ?>
+        <?= $this->Html->script('admin.min', ['block' => 'scriptBottom']) ?>
         <?= $this->fetch('scriptBottom') ?>
     </body>
 </html>
+
