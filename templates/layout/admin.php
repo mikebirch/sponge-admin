@@ -1,9 +1,7 @@
 <?php
 use Cake\Core\Configure;
-$spongeAdmin = Configure::read('spongeAdmin');
-$this->set('spongeAdmin', $spongeAdmin);
 if($spongeAdmin['froala'] === true) {
-    $this->Froala->plugin();
+    //$this->Froala->plugin();
 }
 ?>
 <!doctype html>
@@ -33,13 +31,13 @@ if($spongeAdmin['froala'] === true) {
 
                 <div class="header-user">
                     <ul class="nav">
-                        <li class="parent"><svg class="icon icon-user"><use xlink:href="/img/admin/icons.svg#icon-user"></use></svg><span><?= $userData['username'] ?></span><svg class="icon icon-arrow-down"><use xlink:href="/img/admin/icons.svg#icon-arrow-down"></use></svg>
+                        <li class="parent"><svg class="icon icon-user"><use xlink:href="/img/admin/icons.svg#icon-user"></use></svg><span><?= $user->username ?></span><svg class="icon icon-arrow-down"><use xlink:href="/img/admin/icons.svg#icon-arrow-down"></use></svg>
                             <ul class="sub-nav">
                                 <li><?=
-                                $this->Html->link('<svg class="icon icon-user"><use xlink:href="/img/admin/icons.svg#icon-user"></use></svg>Profile', ['admin' => false, 'plugin' => 'CakeDC/Users', 'controller' => 'users', 'action' => 'profile'], ['escape' => false]);
+                                $this->Html->link('<svg class="icon icon-user"><use xlink:href="/img/admin/icons.svg#icon-user"></use></svg>Profile', ['admin' => false, 'plugin' => 'SpongeUsers', 'controller' => 'SpongeUsers', 'action' => 'profile'], ['escape' => false]);
                                 ?></li>
                                 <li><?=
-                                $this->Html->link('<svg class="icon icon-switch"><use xlink:href="/img/admin/icons.svg#icon-switch"></use></svg>Log Out', ['admin' => false, 'plugin' => 'CakeDC/Users', 'controller' => 'users', 'action' => 'logout'], ['escape' => false]);
+                                $this->Html->link('<svg class="icon icon-switch"><use xlink:href="/img/admin/icons.svg#icon-switch"></use></svg>Log Out', ['admin' => false, 'plugin' => 'SpongeUsers', 'controller' => 'SpongeUsers', 'action' => 'logout'], ['escape' => false]);
                                 ?></li>
                             </ul>
                         </li>
@@ -47,7 +45,7 @@ if($spongeAdmin['froala'] === true) {
                 </div>
                 <nav class="nav-collapse">
                     <ul class="primary">
-                        <?= $this->AdminMenu->adminNav($spongeAdmin['adminNav'], $this->request->getAttribute('here'), $userData); ?>
+                        <?= $this->AdminMenu->adminNav($spongeAdmin['adminNav'], $this->request->getAttribute('here'), $user); ?>
                     </ul>
                 </nav>
 
@@ -75,4 +73,3 @@ if($spongeAdmin['froala'] === true) {
         <?= $this->fetch('scriptBottom') ?>
     </body>
 </html>
-

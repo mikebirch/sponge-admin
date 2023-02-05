@@ -24,7 +24,7 @@ class AdminMenuHelper extends Helper
      * @param  string  $url         URL of current page.
      * @return string               HTML — list items for the menu.
      */
-    public function adminNav($allpages, $url, $userData)
+    public function adminNav($allpages, $url, $user)
     {
         $items = '';
         foreach ($allpages as $page) {
@@ -36,8 +36,8 @@ class AdminMenuHelper extends Helper
             } else {
                 $svg = '';
             }
-            $adminAccess = in_array($userData['role'], $page['adminRoles']);
-            if($userData['is_superuser'] || $adminAccess) {
+            $adminAccess = in_array($user->role, $page['adminRoles']);
+            if($user->is_superuser || $adminAccess) {
                 $pageUrl = Router::url([
                     'plugin' => $page['plugin'],
                         'controller' => $page['controller'],
