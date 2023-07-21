@@ -27,7 +27,7 @@
         <?php echo $this->Delete->createForm(['action' => 'delete', $content->id]) ?>
         <?php endif ?>
         <a href="<?= $content->path ?>">View</a>
-        <?php echo $this->Html->link('Edit', ['action' => 'edit', $content->id], ['class' => 'hijax-panel']); ?>
+        <?php echo $this->Html->link('Edit', ['action' => 'edit', $content->id]); ?>
     </td>
     <td><?php echo $this->Html->link($content->nav, ['action' => 'edit', $content->id],['escape' => false, 'class' => 'hijax-panel']); ?></td>
     <?php
