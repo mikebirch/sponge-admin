@@ -1,7 +1,6 @@
 <?php
-use Cake\Core\Configure;
 if($spongeAdmin['froala'] === true) {
-    //$this->Froala->plugin();
+    $this->Froala->plugin([], ['block' => 'scriptBottom'], ['block' => true]);
 }
 ?>
 <!doctype html>
@@ -17,6 +16,12 @@ if($spongeAdmin['froala'] === true) {
         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <?= $this->Html->css('ie.min') ?>
         <![endif]-->
+        <style>
+            .fr-wrapper div:first-child {
+                position: absolute!important;
+                visibility: hidden!important;
+            }
+        </style>
     </head>
     <body id="admin">
         <div class="header-wrapper">
@@ -70,6 +75,9 @@ if($spongeAdmin['froala'] === true) {
         <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
         <script>window.jQuery || document.write('<script src="/sponge_admin/js/vendor/jquery.min.js"><\/script>')</script>
         <?= $this->Html->script('admin.min', ['block' => 'scriptBottom']) ?>
+        <?php if($spongeAdmin['froala'] === true) : ?>
+        <?php $this->Froala->editor('#froala-body', [], ['block' => 'scriptBottom']) ?>
+        <?php endif ?>
         <?= $this->fetch('scriptBottom') ?>
     </body>
 </html>

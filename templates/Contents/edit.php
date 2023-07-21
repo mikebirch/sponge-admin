@@ -24,8 +24,8 @@
         if($content->id != 1){ // not for home page
             echo $this->Form->control('title');
         }
-        echo $this->Form->control('body', ['class' => 'froala']);
-        echo $this->Form->control('sidebar', ['class' => 'froala']);
+        echo $this->Form->control('body', ['id' => 'froala-body']);
+        echo $this->Form->control('sidebar', ['id' => 'froala-sidebar']);
         if($content->id != 1){ // not for home page
             echo $this->Form->control('public');
             echo $this->Form->control('published');
