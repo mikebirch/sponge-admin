@@ -256,6 +256,7 @@ $(document).ready(function () {
         })
         .then(function (html) {
         overlay_content.innerHTML = html;
+        new FroalaEditor("#froala-body",{"paragraphFormat":{"N":"Paragraph","H2":"Heading2","H3":"Heading3","H4":"Heading4"},"toolbarButtons":["fullscreen","bold","italic","emoticons","paragraphFormat","formatUL","formatOL","insertLink","insertImage","insertVideo","insertFile","insertTable","undo","redo","clearFormatting","html"]});
         })
         .catch(function (err) {
             overlay_content.innerHTML = error;
