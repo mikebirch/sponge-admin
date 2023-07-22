@@ -1,3 +1,3 @@
-# SpongeAdmin plugin for CakePHP 4
+# SpongeAdmin
 
-SpongeAdmin is an admin theme for the [sponge-cake](https://github.com/mikebirch/sponge-cake) plugin.
+SpongeAdmin is a CakePHP 4 admin theme for  the [sponge-cake](https://github.com/mikebirch/sponge-cake) plugin.
